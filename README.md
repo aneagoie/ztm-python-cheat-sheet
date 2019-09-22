@@ -3,10 +3,10 @@ Python ZTM Cheatsheet 💻🚀
 
 Contents
 --------
-**Python Types:** **[`Numbers`](#user-content-numbers)__,__[`Strings`](#user-content-strings)__,__[`Boolean`](#user-content-boolean)__,__[`Lists`](#user-content-lists)__,__[`Dictionaries`](#user-content-dictionaries)__,__ [`Tuples`](#user-content-tuples)__,__[`Sets`](#user-content-sets)__,__[`None`](#user-content-none)**  
-**Python Basics:** **[`Comparison Operators`](#user-content-comparison-operators)**__,__ **[`Logical Operators`](#user-content-logical-operators)**__,__ **[`Loops`](#user-content-Loops)**__,__**[`Range`](#user-content-Range)**__,__ **[`Enumarate`](#user-content-Enumerate)**__,__ **[`Counter`](#user-content-Counter)**__,__ **[`Named Tuple`](#user-content-named-tuple)**    
-**Functions:** **[`Functions`](#user-content-functions)**__,__ **[`Lambda`](#user-content-lambda)**__,__ **[`Comprehensions`](#user-content-comprehensions)**__,__ **[`Map,Filter,Reduce`](#user-content-map-filter-reduce)**__,__ **[`Ternary`](#user-content-ternary-condition)**__,__ **[`Any,All`](#user-content-any-all)**__,__ **[`Closures`](#user-content-closures)**__,__ **[`Scope`](#user-content-scope)**    
-**Advanced Python:** **[`Modules`](#user-content-modules)**__,__ **[`Iterators`](#user-content-iterators)**__,__ **[`Generators`](#user-content-Generators)**__,__ **[`Decorators`](#user-content-Decorators)**__,__ **[`Class`](#user-content-Class)**  
+**Python Types:** **[`Numbers`](#numbers)__,__[`Strings`](#strings)__,__[`Boolean`](#boolean)__,__[`Lists`](#lists)__,__[`Dictionaries`](#dictionaries)__,__ [`Tuples`](#tuples)__,__[`Sets`](#sets)__,__[`None`](#none)**  
+**Python Basics:** **[`Comparison Operators`](#comparison-operators)__,__[`Logical Operators`](#logical-operators)__,__[`Loops`](#Loops)**__,__**[`Range`](#Range)__,__[`Enumarate`](#Enumerate)__,__[`Counter`](#Counter)__,__[`Named Tuple`](#named-tuple)**    
+**Functions:** **[`Functions`](#functions)__,__[`Lambda`](#lambda)__,__[`Comprehensions`](#comprehensions)__,__[`Map,Filter,Reduce`](#map-filter-reduce)__,__[`Ternary`](#ternary-condition)__,__[`Any,All`](#any-all)__,__[`Closures`](#closures)__,__[`Scope`](#scope)**    
+**Advanced Python:** **[`Modules`](#modules)__,__[`Iterators`](#iterators)__,__[`Generators`](#Generators)__,__[`Decorators`](#Decorators)__,__[`Class`](#Class)**  
 
 Numbers
 ----
