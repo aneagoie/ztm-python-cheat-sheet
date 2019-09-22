@@ -4,9 +4,10 @@ Python ZTM Cheatsheet 💻🚀
 Contents
 --------
 **Python Types:** **[`Numbers`](#numbers)__,__[`Strings`](#strings)__,__[`Boolean`](#boolean)__,__[`Lists`](#lists)__,__[`Dictionaries`](#dictionaries)__,__ [`Tuples`](#tuples)__,__[`Sets`](#sets)__,__[`None`](#none)**  
-**Python Basics:** **[`Comparison Operators`](#comparison-operators)__,__[`Logical Operators`](#logical-operators)__,__[`Loops`](#Loops)**__,__**[`Range`](#Range)__,__[`Enumarate`](#Enumerate)__,__[`Counter`](#Counter)__,__[`Named Tuple`](#named-tuple)**    
+**Python Basics:** **[`Comparison Operators`](#comparison-operators)__,__[`Logical Operators`](#logical-operators)__,__[`Loops`](#loops)__,__[`Range`](#range)__,__[`Enumarate`](#enumerate)__,__[`Counter`](#counter)__,__[`Named Tuple`](#named-tuple)__,__[`OrderedDict`](#ordereddict)**    
 **Functions:** **[`Functions`](#functions)__,__[`Lambda`](#lambda)__,__[`Comprehensions`](#comprehensions)__,__[`Map,Filter,Reduce`](#map-filter-reduce)__,__[`Ternary`](#ternary-condition)__,__[`Any,All`](#any-all)__,__[`Closures`](#closures)__,__[`Scope`](#scope)**    
-**Advanced Python:** **[`Modules`](#modules)__,__[`Iterators`](#iterators)__,__[`Generators`](#Generators)__,__[`Decorators`](#Decorators)__,__[`Class`](#Class)**  
+**Advanced Python:** **[`Modules`](#modules)__,__[`Iterators`](#iterators)__,__[`Generators`](#Generators)__,__[`Decorators`](#Decorators)__,__[`Class`](#Class)__,__[`Exceptions`](#Exceptions)__,__[`Command Line Arguments`](#command-line-arguments)__,__[`File IO`](#file-io)__,__[`Useful Libraries`](#useful-libraries)**  
+
 
 Numbers
 ----
@@ -589,7 +590,7 @@ def get_multiplier(a):
 
 
 
-### Nonlocal
+### Scope
 **If variable is being assigned to anywhere in the scope, it is regarded as a local variable, unless it is declared as a 'global' or a 'nonlocal'.**
 
 ```python
@@ -653,7 +654,7 @@ def count(start, step):
 ```
 
 
-Decorator
+Decorators
 ---------
 **A decorator takes a function, adds some functionality and returns it.**
 
@@ -694,22 +695,10 @@ class <name>:
     age = 80 # Class Object Attribute
     def __init__(self, a):
         self.a = a #Object Attribute
-    def __repr__(self):
-        class_name = self.__class__.__name__
-        return f'{class_name}({self.a!r})'
-    def __str__(self):
-        return str(self.a)
 
     @classmethod
     def get_class_name(cls):
         return cls.__name__
-```
-
-### Constructor Overloading
-```python
-class <name>:
-    def __init__(self, a=None):
-        self.a = a
 ```
 
 ### Inheritance
@@ -736,86 +725,6 @@ class C(A, B): pass
 ```python
 >>> C.mro()
 [<class 'C'>, <class 'A'>, <class 'B'>, <class 'object'>]
-```
-
-### Copy
-```python
-from copy import copy, deepcopy
-<object> = copy(<object>)
-<object> = deepcopy(<object>)
-```
-
-
-Duck Types
-----------
-**A duck type is an implicit type that prescribes a set of special methods. Any object that has those methods defined is considered a member of that duck type.**
-
-### Comparable
-* **If eq() method is not overridden, it returns `'id(self) == id(other)'`, which is the same as `'self is other'`.**
-* **That means all objects compare not equal by default.**
-
-```python
-class MyComparable:
-    def __init__(self, a):
-        self.a = a
-    def __eq__(self, other):
-        if isinstance(other, type(self)):
-            return self.a == other.a
-        return False
-```
-
-### Hashable
-* **Hashable object needs both hash() and eq() methods and its hash value should never change.**
-* **Hashable objects that compare equal must have the same hash value, meaning default hash() that returns `'id(self)'` will not do.**
-* **That is why Python automatically makes classes unhashable if you only implement eq().**
-
-```python
-class MyHashable:
-    def __init__(self, a):
-        self.__a = copy.deepcopy(a)
-    @property
-    def a(self):
-        return self.__a
-    def __eq__(self, other):
-        if isinstance(other, type(self)):
-            return self.a == other.a
-        return False
-    def __hash__(self):
-        return hash(self.a)
-```
-
-### Sequence
-* **Methods do not depend on each other, so they can be skipped if not needed.**
-* **Any object with defined getitem() is considered iterable, even if it lacks iter().**
-```python
-class MySequence:
-    def __init__(self, a):
-        self.a = a
-    def __len__(self):
-        return len(self.a)
-    def __getitem__(self, i):
-        return self.a[i]
-    def __setitem__(self, i, value):
-        self.a[i] = value
-    def __iter__(self):
-        for el in self.a:
-            yield el
-```
-
-### Callable
-```python
-class Counter:
-    def __init__(self):
-        self.i = 0
-    def __call__(self):
-        self.i += 1
-        return self.i
-```
-
-```python
->>> counter = Counter()
->>> counter(), counter(), counter()
-(1, 2, 3)
 ```
 
 Exceptions
@@ -865,7 +774,7 @@ script_name = sys.argv[0]
 arguments   = sys.argv[1:]
 ```
 
-Open
+File IO
 ----
 **Opens a file and returns a corresponding file object.**
 
@@ -924,7 +833,7 @@ def append_to_file(filename, text):
         file.write(text)
 ```
 
-Libraries
+Useful Libraries
 =========
 
 CSV
@@ -995,53 +904,14 @@ def write_to_pickle_file(filename, an_object):
 ```
 
 
-SQLite
-------
-```python
-import sqlite3
-db = sqlite3.connect('<path>')
-...
-db.close()
-```
-
-### Read
-```python
-cursor = db.execute('<query>')
-if cursor:
-    <tuple> = cursor.fetchone()  # First row.
-    <list>  = cursor.fetchall()  # Remaining rows.
-```
-
-### Write
-```python
-db.execute('<query>')
-db.commit()
-```
-
 Profile
 -------
 ### Basic
 ```python
 from time import time
-start_time = time()  # Seconds since Epoch.
+start_time = time()  # Seconds since
 ...
 duration = time() - start_time
-```
-
-### High Performance
-```python
-from time import perf_counter as pc
-start_time = pc()    # Seconds since restart.
-...
-duration = pc() - start_time
-```
-
-### Timing a Snippet
-```python
->>> from timeit import timeit
->>> timeit('"-".join(str(a) for a in range(100))',
-...        number=10000, globals=globals(), setup='pass')
-0.34986
 ```
 
 ### Math
@@ -1108,8 +978,6 @@ from dateutil.tz import UTC, tzlocal, gettz
 <Ta/DTa> = <T/DT>.replace(tzinfo=<tz>)      # Unconverted object with new timezone.
 ```
 
-
-
 Regex
 -----
 ```python
@@ -1139,18 +1007,6 @@ import re
 '\w' == '[a-zA-Z0-9_]'   # Alphanumeric
 ```
 
-
-Extras
-------
-
-### General Options
-```python
-{<el>:<10}       # '<el>      '
-{<el>:>10}       # '      <el>'
-{<el>:^10}       # '   <el>   '
-{<el>:->10}      # '------<el>'
-{<el>:>0}        # '<el>'
-```
 
 Credits
 ------
