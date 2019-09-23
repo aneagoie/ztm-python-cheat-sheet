@@ -31,7 +31,7 @@ type(4E2) #float - 4*10 to the power of 2
 10 * 3  # 30
 10 ** 3 # 1000
 10 / 3  # 3.3333333333333335
-10 // 3 # 3 --> floor division - no decimals and teturns an int
+10 // 3 # 3 --> floor division - no decimals and returns an int
 10 % 3  # 1 --> modulo operator - return the reminder. Good for deciding if number is even or odd
 ```
 
