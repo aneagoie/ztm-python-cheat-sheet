@@ -12,7 +12,8 @@ Contents
 **Advanced Python:** **[`Modules`](#modules)__,__[`Iterators`](#iterators)__,__[`Generators`](#generators)__,__[`Decorators`](#decorators)__,__[`Class`](#class)__,__[`Exceptions`](#exceptions)__,__[`Command Line Arguments`](#command-line-arguments)__,__[`File IO`](#file-io)__,__[`Useful Libraries`](#useful-libraries)**  
 
 
-## Numbers
+Numbers
+----
 **python's 2 main types for Numbers is int and float (or integers and floating point numbers)**
 ```python
 type(1)   #int 
@@ -52,7 +53,7 @@ pi = input("What is the value of pi?")
 pi = float(pi)
 ```
 
-## Strings
+Strings
 ----
 **strings in python as stored as sequences of letters in memory**
 ```python
@@ -108,7 +109,7 @@ print('Hello there {}, {}'.format(name1, name2))# Hello there Andrei and Sunny
 print('Hello there %s and %s' %(name1, name2))  # Hello there Andrei and Sunny --> you can also use %d, %f, %r for integers, floats, string representations of objects respectively
 ```
 
-## Boolean
+Boolean
 ----
 **True or False. Used in a lot of comparison and logical operations in Python**
 ```python
@@ -130,7 +131,7 @@ print(bool(set()))
 # See Logical Operators and Comparison Operators section for more on booleans.
 ```
 
-## Lists
+Lists
 ----
 **Unlike strings, lists are mutable sequences in python**
 ```python
@@ -221,7 +222,7 @@ sorted_by_key = sorted([
 ```
 
 
-## Dictionaries
+Dictionaries
 ----------
 **Also known as mappings or hash tables. They are key value pairs that DO NOT retain order**
 ```python
@@ -253,7 +254,7 @@ new_dict = my_dict.pop('favourite_snack')                              # Removes
 {key: value for key, value in new_dict.items() if key == 'age' or key == 'name'} # {'name': 'Andrei', 'age': 32} --> Filter dict by keys
 ```
 
-## Tuples
+Tuples
 ----
 **Like lists, but they are used for immutable thing (that don't change)**
 ```python
@@ -282,7 +283,7 @@ list(zip([1,2,3], [4,5,6])) # [(1, 4), (2, 5), (3, 6)]
 ```
 
 
-## Sets
+Sets
 ---
 **Unorderd collection of unique elements.**
 ```python
@@ -321,7 +322,7 @@ set1.isdisjoint(set2)                 # False --> return True if two sets have a
 <frozenset> = frozenset(<collection>)
 ```
 
-## None
+None
 ----
 **None is used for absence of a value and can be used to show nothing has been assigned to an object**
 ```python
@@ -329,7 +330,7 @@ type(None) #NoneType
 a = None
 ```
 
-## Comparison Operators
+Comparison Operators
 --------
 ```python
 ==                   # equal values
@@ -341,7 +342,7 @@ a = None
 <element> is <element> # check if two operands refer to same object in memory
 ```
 
-## Logical Operators
+Logical Operators
 --------
 ```python
 1 < 2 and 4 > 1 # True
@@ -358,7 +359,7 @@ else:
   # perform action3
 ```
 
-## Loops
+Loops
 --------
 ```python
 my_list = [1,2,3]
@@ -398,7 +399,7 @@ while msg != 'quit':
     print(msg)
 ```
 
-## Range
+Range
 -----
 ```python
 range(10)          # range(0, 10) --> 0 to 9
@@ -406,7 +407,7 @@ range(1,10)        # range(1, 10)
 list(range(0,10,2))# [0, 2, 4, 6, 8]
 ```
 
-## Enumerate
+Enumerate
 ---------
 ```python
 for i, el in enumerate('helloo'):
@@ -419,7 +420,7 @@ for i, el in enumerate('helloo'):
 # 5, o
 ```
 
-## Counter
+Counter
 -----
 ```python
 from collections import Counter
@@ -428,7 +429,7 @@ counter = Counter(colors)# Counter({'blue': 3, 'red': 2, 'yellow': 1})
 counter.most_common()[0] #('blue', 3)
 ```
 
-## Named Tuple
+Named Tuple
 -----------
 * **Tuple is an immutable and hashable list.**
 * **Named tuple is its subclass with named elements.**
@@ -451,7 +452,7 @@ f'{person.height}'           # '187'
 '{p.height}'.format(p=person)# '187'
 ```
 
-## OrderedDict
+OrderedDict
 --------
 * **Maintains order of insertion**
 ```python
@@ -469,7 +470,7 @@ for name, langs in programmers.items():
 
 ```
 
-## Functions
+Functions
 -------
 
 #### \*args and \*\*kwargs
@@ -518,7 +519,7 @@ head, *body, tail = [1,2,3,4,5]
 ```
 
 
-## Lambda
+Lambda
 ------
 ```python
 # lambda: <return_value>
