@@ -470,7 +470,7 @@ OrderedDict
 * **Maintains order of insertion**
 ```python
 from collections import OrderedDict
-# Store each person's languages, keeping # track of who respoded first. 
+# Store each person's languages, keeping # track of who responded first. 
 programmers = OrderedDict()
 programmers['Tim'] = ['python', 'javascript']
 programmers['Sarah'] = ['C++']
