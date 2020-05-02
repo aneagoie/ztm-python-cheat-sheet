@@ -91,7 +91,7 @@ len('turtle') # 6
 'Help me'.replace('me', 'you')        # 'Help you' --> Replaces first with second param
 'Need to make fire'.startswith('Need')# True
 'and cook rice'.endswith('rice')      # True
-'bye bye'.index(2)                    # e
+'bye bye'.index('e')                  # 2
 'still there?'.upper()                # STILL THERE?
 'HELLO?!'.lower()                     # hello?!
 'ok, I am done.'.capitalize()         # 'Ok, I am done.'
