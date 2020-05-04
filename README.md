@@ -137,7 +137,7 @@ Lists
 ```python
 my_list = [1, 2, '3', True]# we assume this list won't mutate for each example below
 len(my_list)               # 4
-my_list.index(2)           # '3'
+my_list.index('3')         # 2
 my_list.count(2)           # 1 --> count how many times 2 appears
 
 my_list[3]                 # True
