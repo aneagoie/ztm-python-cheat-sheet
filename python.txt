@@ -1,0 +1,7 @@
+*important packages
+
+twilo-for sms
+tweepy- for python
+scrapping- Scrapy,beautifulSoup
+python anywhere for hosting
+github for uploading file
