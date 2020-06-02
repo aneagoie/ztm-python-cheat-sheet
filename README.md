@@ -111,6 +111,13 @@ print('Hello there {}, {}'.format(name1, name2))# Hello there Andrei and Sunny
 print('Hello there %s and %s' %(name1, name2))  # Hello there Andrei and Sunny --> you can also use %d, %f, %r for integers, floats, string representations of objects respectively
 ```
 
+```python
+#Pallindrome check
+word = 'reviver'
+p = bool(word.find(word[::-1]) + 1)
+print(p) #True
+```
+
 Boolean
 ----
 **True or False. Used in a lot of comparison and logical operations in Python**
@@ -197,6 +204,14 @@ sum([1,2,3,4,5])# 15
 ```
 
 ```python
+# Get First and Last element of a list
+mList = [63, 21, 30, 14, 35, 26, 77, 18, 49, 10]
+first, *x, last = mList
+print(first) #63
+print(last) #10
+```
+
+```python
 # Matrix
 matrix = [[1,2,3], [4,5,6], [7,8,9]]
 matrix[2][0] # 7 --> Grab first first of the third item in the matrix object
@@ -236,6 +251,11 @@ sorted_by_key = sorted([
                        key=lambda el: (el['name']))# [{'name': 'Andy', 'age': 18}, {'name': 'Bina', 'age': 30}, {'name': 'zoey', 'age': 55}]
 ```
 
+```python
+# Read line of a file into a list
+with open("myfile.txt") as f:
+  lines = [line.strip() for line in f]
+```
 
 Dictionaries
 ----------
@@ -297,6 +317,12 @@ my_tuple.count('grapes') # 2
 list(zip([1,2,3], [4,5,6])) # [(1, 4), (2, 5), (3, 6)]
 ```
 
+```python
+# unzip
+z = [(1, 2), (3, 4), (5, 6), (7, 8)] #some output of zip() function
+unzip = lambda z: list(zip(*z))
+unzip(z)
+```
 
 Sets
 ---
@@ -539,6 +565,22 @@ Lambda
 ```python
 # lambda: <return_value>
 # lambda <argument1>, <argument2>: <return_value>
+```
+
+```python
+# Factorial
+from functools import reduce
+
+n = 3
+factorial = reduce(lambda x, y: x*y, range(1, n+1))
+print(factorial) #6
+```
+
+```python
+# Fibonacci
+fib = lambda n : n if n <= 1 else fib(n-1) + fib(n-2)
+result = fib(10)
+print(result) #55
 ```
 
 Comprehensions
