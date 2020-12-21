@@ -217,13 +217,13 @@ matrix = [[1,2,3], [4,5,6], [7,8,9]]
 matrix[2][0] # 7 --> Grab first first of the third item in the matrix object
 
 # Looping through a matrix by rows:
-mx = [[1,2],[3,4]]
+mx = [[1,2,3],[4,5,6]]
 for row in range(len(mx)):
-	for col in range(len(mx)):
-		print(mx[row][col]) # 1 2 3 4
+	for col in range(len(mx[0])):
+		print(mx[row][col]) # 1 2 3 4 5 6
     
 # Transform into a list:
-[mx[row][col] for row in range(len(mx)) for col in range(len(mx))] # [1,2,3,4]
+[mx[row][col] for row in range(len(mx)) for col in range(len(mx[0]))] # [1,2,3,4,5,6]
 
 # Combine columns with zip and *:
 [x for x in zip(*mx)] # [(1, 3), (2, 4)]
