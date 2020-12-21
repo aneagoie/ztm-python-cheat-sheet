@@ -259,7 +259,7 @@ with open("myfile.txt") as f:
 
 Dictionaries
 ----------
-**Also known as mappings or hash tables. They are key value pairs that DO NOT retain order**
+**Also known as mappings or hash tables. They are key value pairs that are guaranteed to retain order of insertion starting from Python 3.7**
 ```python
 my_dict = {'name': 'Andrei Neagoie', 'age': 30, 'magic_power': False}
 my_dict['name']                      # Andrei Neagoie
