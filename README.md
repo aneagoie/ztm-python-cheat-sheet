@@ -18,12 +18,12 @@ Numbers
 ----
 **python's 2 main types for Numbers is int and float (or integers and floating point numbers)**
 ```python
-type(1)   #int 
-type(-10) #int
-type(0)   #int
-type(0.0) #float
-type(2.2) #float
-type(4E2) #float - 4*10 to the power of 2
+type(1)   # int 
+type(-10) # int
+type(0)   # int
+type(0.0) # float
+type(2.2) # float
+type(4E2) # float - 4*10 to the power of 2
 ```
 
 ```python
@@ -63,7 +63,7 @@ type('Hellloooooo') # str
 
 'I\'m thirsty'
 "I'm thirsty"
-"\n" # new line.
+"\n" # new line
 "\t" # adds a tab
 
 'Hey you!'[4] # y
@@ -97,7 +97,7 @@ len('turtle') # 6
 'still there?'.upper()                # STILL THERE?
 'HELLO?!'.lower()                     # hello?!
 'ok, I am done.'.capitalize()         # 'Ok, I am done.'
-'oh hi there'.find('i')               # 4 --> returns the starting index position of the first occurence
+'oh hi there'.find('i')               # 4 --> returns the starting index position of the first occurrence
 'oh hi there'.count('e')              # 2
 
 ```
@@ -112,10 +112,10 @@ print('Hello there %s and %s' %(name1, name2))  # Hello there Andrei and Sunny -
 ```
 
 ```python
-#Pallindrome check
+# Palindrome check
 word = 'reviver'
 p = bool(word.find(word[::-1]) + 1)
-print(p) #True
+print(p) # True
 ```
 
 Boolean
@@ -144,7 +144,7 @@ Lists
 ----
 **Unlike strings, lists are mutable sequences in python**
 ```python
-my_list = [1, 2, '3', True]# we assume this list won't mutate for each example below
+my_list = [1, 2, '3', True]# We assume this list won't mutate for each example below
 len(my_list)               # 4
 my_list.index('3')         # 2
 my_list.count(2)           # 1 --> count how many times 2 appears
@@ -163,7 +163,7 @@ my_list[0:3:2]             # [1, '3']
 ```python
 # Add to List
 my_list * 2                # [1, 2, '3', True, 1, 2, '3', True]
-my_list + [100]            # [1, 2, '3', True, 100] --> doesn't mutate origina list, creates new one
+my_list + [100]            # [1, 2, '3', True, 100] --> doesn't mutate original list, creates new one
 my_list.append(100)        # None --> Mutates original list to [1, 2, '3', True, 100]          # Or: <list> += [<el>]
 my_list.extend([100, 200]) # None --> Mutates original list to [1, 2, '3', True, 100, 200]
 my_list.insert(2, '!!!')   # None -->  [1, 2, '!!!', '3', True] - Inserts item at index and moves the rest to the right.
@@ -217,13 +217,13 @@ matrix = [[1,2,3], [4,5,6], [7,8,9]]
 matrix[2][0] # 7 --> Grab first first of the third item in the matrix object
 
 # Looping through a matrix by rows:
-mx = [[1,2],[3,4]]
+mx = [[1,2,3],[4,5,6]]
 for row in range(len(mx)):
-	for col in range(len(mx)):
-		print(mx[row][col]) # 1 2 3 4
+	for col in range(len(mx[0])):
+		print(mx[row][col]) # 1 2 3 4 5 6
     
 # Transform into a list:
-[mx[row][col] for row in range(len(mx)) for col in range(len(mx))] # [1,2,3,4]
+[mx[row][col] for row in range(len(mx)) for col in range(len(mx[0]))] # [1,2,3,4,5,6]
 
 # Combine columns with zip and *:
 [x for x in zip(*mx)] # [(1, 3), (2, 4)]
@@ -247,8 +247,8 @@ sorted_by_second = sorted(['hi','you','man'], key=lambda el: el[1])# ['man', 'hi
 sorted_by_key = sorted([
                        {'name': 'Bina', 'age': 30},
                        {'name':'Andy', 'age': 18},
-                       {'name': 'zoey', 'age': 55}],
-                       key=lambda el: (el['name']))# [{'name': 'Andy', 'age': 18}, {'name': 'Bina', 'age': 30}, {'name': 'zoey', 'age': 55}]
+                       {'name': 'Zoey', 'age': 55}],
+                       key=lambda el: (el['name']))# [{'name': 'Andy', 'age': 18}, {'name': 'Bina', 'age': 30}, {'name': 'Zoey', 'age': 55}]
 ```
 
 ```python
@@ -259,7 +259,7 @@ with open("myfile.txt") as f:
 
 Dictionaries
 ----------
-**Also known as mappings or hash tables. They are key value pairs that DO NOT retain order**
+**Also known as mappings or hash tables. They are key value pairs that are guaranteed to retain order of insertion starting from Python 3.7**
 ```python
 my_dict = {'name': 'Andrei Neagoie', 'age': 30, 'magic_power': False}
 my_dict['name']                      # Andrei Neagoie
@@ -302,7 +302,7 @@ my_tuple[-1]                           # 'grapes'
 
 ```python
 # Immutability
-my_tuple[1] = 'donuts'  #TypeError
+my_tuple[1] = 'donuts'  # TypeError
 my_tuple.append('candy')# AttributeError
 ```
 
@@ -319,7 +319,7 @@ list(zip([1,2,3], [4,5,6])) # [(1, 4), (2, 5), (3, 6)]
 
 ```python
 # unzip
-z = [(1, 2), (3, 4), (5, 6), (7, 8)] #some output of zip() function
+z = [(1, 2), (3, 4), (5, 6), (7, 8)] # Some output of zip() function
 unzip = lambda z: list(zip(*z))
 unzip(z)
 ```
@@ -367,7 +367,7 @@ None
 ----
 **None is used for absence of a value and can be used to show nothing has been assigned to an object**
 ```python
-type(None) #NoneType
+type(None) # NoneType
 a = None
 ```
 
@@ -395,7 +395,7 @@ not True        # False
 if <condition that evaluates to boolean>:
   # perform action1
 elif <condition that evaluates to boolean>:
-  #perform action2
+  # perform action2
 else:
   # perform action3
 ```
@@ -420,7 +420,7 @@ for num in my_list2:
 for num in '123':
     print(num) # 1, 2, 3
 
-for k,v in my_dict.items(): #Dictionary Unpacking
+for k,v in my_dict.items(): # Dictionary Unpacking
     print(k) # 'a', 'b', 'c'
     print(v) # 1, 2, 3
 
@@ -429,7 +429,7 @@ while <condition that evaluates to boolean>:
   if <condition that evaluates to boolean>:
     break # break out of while loop
   if <condition that evaluates to boolean>:
-    continue #continue to the next line in the block
+    continue # continue to the next line in the block
 ```
 
 ```python
@@ -467,7 +467,7 @@ Counter
 from collections import Counter
 colors = ['red', 'blue', 'yellow', 'blue', 'red', 'blue']
 counter = Counter(colors)# Counter({'blue': 3, 'red': 2, 'yellow': 1})
-counter.most_common()[0] #('blue', 3)
+counter.most_common()[0] # ('blue', 3)
 ```
 
 Named Tuple
@@ -616,13 +616,13 @@ Map Filter Reduce
 from functools import reduce
 list(map(lambda x: x + 1, range(10)))            # [1, 2, 3, 4, 5, 6, 7, 8, 9,10]
 list(filter(lambda x: x > 5, range(10)))         # (6, 7, 8, 9)
-list(reduce(lambda acc, x: acc + x, range(10)))  # 45
+reduce(lambda acc, x: acc + x, range(10))        # 45
 ```
 
 Any All
 ------
 ```python
-any([False, True, False])# True if at leaset one item in collection is truthy, False if empty.
+any([False, True, False])# True if at least one item in collection is truthy, False if empty.
 all([True,1,3,True])     # True if all items in collection are true
 ```
 
@@ -755,7 +755,7 @@ Class
 class <name>:
     age = 80 # Class Object Attribute
     def __init__(self, a):
-        self.a = a #Object Attribute
+        self.a = a # Object Attribute
 
     @classmethod
     def get_class_name(cls):
@@ -874,7 +874,7 @@ File IO
 ```python
 def read_file(filename):
     with open(filename, encoding='utf-8') as file:
-        return file.readlines() #or read()
+        return file.readlines() # or read()
 
 for line in read_file(filename):
   print(line)
