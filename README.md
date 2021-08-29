@@ -192,6 +192,8 @@ del [1,2,3][0] #
 [1,2,5,3].sort(reverse=True) # None --> Mutates list to [5, 3, 2, 1]
 [1,2,5,3].reverse()      # None --> Mutates list to [3, 5, 2, 1]
 sorted([1,2,5,3])        # [1, 2, 3, 5] --> new list created
+my_list = [(4,1),(2,4),(2,5),(1,6),(8,9)]
+sorted(my_list,key=lambda x: int(x[0])) # [(1, 6), (2, 4), (2, 5), (4, 1), (8, 9)] --> sort the list by 1st (0th index) value of the tuple
 list(reversed([1,2,5,3]))# [3, 5, 2, 1] --> reversed() returns an iterator
 ```
 
