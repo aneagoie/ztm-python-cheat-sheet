@@ -420,6 +420,10 @@ for num in my_list2:
 for num in '123':
     print(num) # 1, 2, 3
 
+for idx,value in enumerate(my_list):
+    print(idx) # get the index of the item
+    print(value) # get the value
+
 for k,v in my_dict.items(): # Dictionary Unpacking
     print(k) # 'a', 'b', 'c'
     print(v) # 1, 2, 3
