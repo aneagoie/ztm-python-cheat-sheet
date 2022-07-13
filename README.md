@@ -183,7 +183,7 @@ new_basket2 = basket[:]
 [1,2,3].pop(1)   # 2 --> mutates original list
 [1,2,3].remove(2)# None --> [1,3] Removes first occurrence of item or raises ValueError.
 [1,2,3].clear()  # None --> mutates original list and removes all items: []
-del [1,2,3][0] # 
+del [1,2,3][0]   # None --> removes item on index 0
 ```
 
 ```python
