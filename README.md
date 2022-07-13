@@ -107,7 +107,7 @@ len('turtle') # 6
 name1 = 'Andrei'
 name2 = 'Sunny'
 print(f'Hello there {name1} and {name2}')       # Hello there Andrei and Sunny - Newer way to do things as of python 3.6
-print('Hello there {}, {}'.format(name1, name2))# Hello there Andrei and Sunny
+print('Hello there {} and {}'.format(name1, name2))# Hello there Andrei and Sunny
 print('Hello there %s and %s' %(name1, name2))  # Hello there Andrei and Sunny --> you can also use %d, %f, %r for integers, floats, string representations of objects respectively
 ```
 
@@ -183,7 +183,7 @@ new_basket2 = basket[:]
 [1,2,3].pop(1)   # 2 --> mutates original list
 [1,2,3].remove(2)# None --> [1,3] Removes first occurrence of item or raises ValueError.
 [1,2,3].clear()  # None --> mutates original list and removes all items: []
-del [1,2,3][0] # 
+del [1,2,3][0]   # None --> removes item on index 0 or raises IndexError
 ```
 
 ```python
