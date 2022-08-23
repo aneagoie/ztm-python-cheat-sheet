@@ -57,7 +57,7 @@ pi = float(pi)
 
 Strings
 ----
-**strings in python as stored as sequences of letters in memory**
+**strings in python are stored as sequences of letters in memory**
 ```python
 type('Hellloooooo') # str
 
