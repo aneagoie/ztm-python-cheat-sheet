@@ -193,6 +193,8 @@ del [1,2,3][0]   # None --> removes item on index 0 or raises IndexError
 [1,2,5,3].sort(reverse=True) # None --> Mutates list to [5, 3, 2, 1]
 [1,2,5,3].reverse()      # None --> Mutates list to [3, 5, 2, 1]
 sorted([1,2,5,3])        # [1, 2, 3, 5] --> new list created
+my_list = [(4,1),(2,4),(2,5),(1,6),(8,9)]
+sorted(my_list,key=lambda x: int(x[0])) # [(1, 6), (2, 4), (2, 5), (4, 1), (8, 9)] --> sort the list by 1st (0th index) value of the tuple
 list(reversed([1,2,5,3]))# [3, 5, 2, 1] --> reversed() returns an iterator
 ```
 
@@ -420,6 +422,10 @@ for num in my_list2:
 
 for num in '123':
     print(num) # 1, 2, 3
+
+for idx,value in enumerate(my_list):
+    print(idx) # get the index of the item
+    print(value) # get the value
 
 for k,v in my_dict.items(): # Dictionary Unpacking
     print(k) # 'a', 'b', 'c'
