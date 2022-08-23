@@ -93,13 +93,14 @@ len('turtle') # 6
 'Help me'.replace('me', 'you')        # 'Help you' --> Replaces first with second param
 'Need to make fire'.startswith('Need')# True
 'and cook rice'.endswith('rice')      # True
-'bye bye'.index('e')                  # 2
 'still there?'.upper()                # STILL THERE?
 'HELLO?!'.lower()                     # hello?!
 'ok, I am done.'.capitalize()         # 'Ok, I am done.'
-'oh hi there'.find('i')               # 4 --> returns the starting index position of the first occurrence
 'oh hi there'.count('e')              # 2
-
+'bye bye'.index('e')                  # 2
+'oh hi there'.find('i')               # 4 --> returns the starting index position of the first occurrence
+'oh hi there'.find('a')               # -1
+'oh hi there'.index('a')              # Raises ValueError
 ```
 
 ```python
