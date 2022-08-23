@@ -725,6 +725,31 @@ def function_that_gets_passed_to_decorator():
     ...
 ```
 
+**Example Decorator: timing performance using a decorator.**
+* **The functools decorator `@functools.wraps` is used to maintain function naming and 
+documentation of the function within the decorator.**
+
+```python
+from time import time 
+import functools
+
+def performance(func):
+
+    @functools.wraps()
+    def wrapper(*args, **kwargs):
+        t1 = time()
+        result = func(*args, **kwargs)
+        t2 = time() 
+        print(f"Took: {t2 - t1} ms")
+        return result
+    return wrapper
+
+# calling a function with the decorator 
+@performance
+def long_time():
+    print(sum(i*i for i in range(10000)))
+``` 
+
 ### Debugger Example
 **Decorator that prints function's name every time it gets called.**
 
