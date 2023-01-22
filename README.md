@@ -1136,7 +1136,7 @@ os.path.exists() # Checks if a path exists or not
 os.path.isdir() # Checks if a directory exists
 os.path.isfile() # Checks if a file exists
 os.path.join() # Joins two different paths together
-os.path.split() # Splits the entire path into different sections for readability
+os.path.split() # Splits the entire path into different sections for easy readability
 ```
 
 Credits
