@@ -9,7 +9,7 @@ Contents
 
 **Python Basics:** **[`Comparison Operators`](#comparison-operators)__,__[`Logical Operators`](#logical-operators)__,__[`Loops`](#loops)__,__[`Range`](#range)__,__[`Enumerate`](#enumerate)__,__[`Counter`](#counter)__,__[`Named Tuple`](#named-tuple)__,__[`OrderedDict`](#ordereddict)**    
 
-**Functions:** **[`Functions`](#functions)__,__[`Lambda`](#lambda)__,__[`Comprehensions`](#comprehensions)__,__[`Map,Filter,Reduce`](#map-filter-reduce)__,__[`Ternary`](#ternary-condition)__,__[`Any,All`](#any-all)__,__[`Closures`](#closures)__,__[`Scope`](#scope)**    
+**Functions:** **[`Functions`](#functions)__,__[`Lambda`](#lambda)__,__[`Comprehensions`](#comprehensions)__,__[`Map,Filter,Reduce`](#map-filter-reduce)__,__[`Ternary`](#ternary-condition)__,__[`Any,All`](#any-all)_,_[`Docstrings`](#docstrings)_,__[`Closures`](#closures)__,__[`Scope`](#scope)**    
 
 **Advanced Python:** **[`Modules`](#modules)__,__[`Iterators`](#iterators)__,__[`Generators`](#generators)__,__[`Decorators`](#decorators)__,__[`Class`](#class)__,__[`Exceptions`](#exceptions)__,__[`Command Line Arguments`](#command-line-arguments)__,__[`File IO`](#file-io)__,__[`Useful Libraries`](#useful-libraries)**  
 
@@ -633,6 +633,17 @@ any([False, True, False])# True if at least one item in collection is truthy, Fa
 all([True,1,3,True])     # True if all items in collection are true
 ```
 
+Docstrings
+------
+**Python docstrings are the string literals that** **appear right after the definition of a** **function, method, class, or module. Let's take an example.**
+
+```python
+def square(n):
+    """Takes in a number n, returns the square of n"""
+    return n**2
+
+print(square.__doc__)    # Output Takes in a number n, returns the square of n
+```
 
 Closures
 -------
