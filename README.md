@@ -260,6 +260,35 @@ with open("myfile.txt") as f:
   lines = [line.strip() for line in f]
 ```
 
+Arrays
+----
+**Just like lists, arrays are mutable sequences, with a couple of differencies. They are restricted to contain elements of the same data type, which makes this type more memory-efficient. Functionality to work with arrays is provided by array and numpy modules.**
+
+```python
+# Using array module
+import array
+
+my_array = array.array('i', [1, 2, 3, 4, 5]) # --> Creates an array
+my_array[2] = 10                             # None --> Modifies an element at index
+my_array.append(6)                           # None --> Adds an element
+my_array.remove(4)                           # None --> Removes an element if present, otherwise raises a ValueError
+print(my_array)                              # --> Output: array('i', [1, 2, 10, 5, 6])
+my_list = my_array.tolist()                  # Creates a new list based on a given array
+print(my_list)                               # --> Output: [1, 2, 10, 5, 6]
+```
+
+```python
+# Using numpy module
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5])   # --> Creates a numpy array
+arr[2] = 10                       # --> Modifies the element at given index
+arr = np.append(arr, 99)          # --> Appends an element
+arr = np.append(arr, [6, 7])      # --> Appends elements from another array
+arr = np.insert(arr, 4, [8, 9])   # --> Inserts 8 and 9, starting at index 4
+arr = np.delete(arr, 3)           # --> Removes element at a given index
+```
+
 Dictionaries
 ----------
 **Also known as mappings or hash tables. They are key value pairs that are guaranteed to retain order of insertion starting from Python 3.7**
