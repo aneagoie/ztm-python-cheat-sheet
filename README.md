@@ -1100,6 +1100,44 @@ import re
 '\w' == '[a-zA-Z0-9_]'   # Alphanumeric
 ```
 
+### OS
+**OS is a Python package which allows users to control their device as well as their files from the comfortable space of their environment**
+```python
+import os
+
+#DIRECTORIES 
+os.getcwd() #  Gets the current directory
+os.mkdir() # Creates a new directory
+os.chdir() # Change the directory
+os.getcwd() # Change directory to the drive
+os.rmdir() # Remove a directory
+os.listdir() # Lists all directories in the specified directory
+
+# PLATFORM
+os.name # Recieve the current platform you are on
+
+# ENVIRONMENT 
+os.environ # Recieve all of the environment variables of your device
+os.getenv() # Output your current environment
+os.system("cls") # Clears the current terminal
+os.system("clear") # Clears the current terminal
+
+# FILE
+os.rename(src, dst) # Rename a file
+os.startfile(dst) # Open a file
+os.walk(dst) # Outputs the entire path to your current route directory
+os.remove(dst) # Removes a file
+
+# PATH
+os.path() # Outputs your current path
+os.path.basename() # Returns just the filename of the current path
+os.path.dirname() # Returns the directory until your current path
+os.path.exists() # Checks if a path exists or not
+os.path.isdir() # Checks if a directory exists
+os.path.isfile() # Checks if a file exists
+os.path.join() # Joins two different paths together
+os.path.split() # Splits the entire path into different sections for easy readability
+```
 
 Credits
 ------
