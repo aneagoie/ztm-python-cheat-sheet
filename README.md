@@ -13,6 +13,9 @@ Contents
 
 **Advanced Python:** **[`Modules`](#modules)__,__[`Iterators`](#iterators)__,__[`Generators`](#generators)__,__[`Decorators`](#decorators)__,__[`Class`](#class)__,__[`Exceptions`](#exceptions)__,__[`Command Line Arguments`](#command-line-arguments)__,__[`File IO`](#file-io)__,__[`Useful Libraries`](#useful-libraries)**  
 
+**Developer Fundamentals:** 
+[`Rules`](#developer-fundamentals)
+
 
 Numbers
 ----
@@ -1100,6 +1103,41 @@ import re
 '\w' == '[a-zA-Z0-9_]'   # Alphanumeric
 ```
 
+### Developer Fundamentals 
+In this section, we will discuss good practices to follow during Python programming as taught in the course "The Complete Python Developer."
+
+**Rule 1**
+**commenting code:** This is a best practice every beginner should follow. Commenting code helps understand the code in the future. Avoid unnecessary commenting. Here is an example of good comments:
+
+```python
+def calculate_rectangle_area(length, width):
+    # Ensure inputs are positive numbers
+    if length <= 0 or width <= 0:
+        return 0  # Return 0 for invalid dimensions
+    
+    # Calculate the area
+    area = length * width
+    
+    # Round the result to 2 decimal places
+    rounded_area = round(area, 2)
+    
+    return rounded_area  # Return the final result
+```
+
+**Rule 2**
+**Meaningful Variable Names** 
+Writing meaningful variable names helps increase code readability and also helps fellow developers understand the code. Here is an example of meaningful variable names:
+
+```python
+# Good Practice
+book_price = 12.99 # price of book
+num_pens = 5 # number of pens
+
+# Bad Practice
+a = 12.99 # not clear what does 'a' used for
+b = 5 # not clear what does 'b' used for
+
+```
 
 Credits
 ------
